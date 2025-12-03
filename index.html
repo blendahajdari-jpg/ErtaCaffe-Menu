@@ -1,116 +1,48 @@
 <!doctype html>
 <html lang="sq">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>ERTA CAFFE — Menu QR</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ERTA CAFFE — QR Code</title>
   <style>
-    :root{
-      --accent:#f06b2d;
-      --glass-bg: rgba(255,255,255,0.18);
-      --glass-border: rgba(255,255,255,0.35);
-      --modal-bg: rgba(0,0,0,0.6);
-      --card: #fff;
+    body {
+      margin:0; 
+      font-family: Arial, sans-serif;
+      background: #eee;
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      height: 100vh;
+      flex-direction: column;
+      padding: 20px;
     }
-    body{margin:0; font-family:Arial; background:#eee; display:flex; justify-content:center; padding:18px}
-    .container{max-width:420px; width:100%; position:relative}
-
-    /* QR code box */
-    .qr-wrap{
-      position:absolute;
-      left:12px; top:12px;
-      background:#fff;
-      padding:8px; border-radius:10px;
-      box-shadow:0 4px 16px rgba(0,0,0,0.15);
-      text-align:center; z-index:40;
+    .qr-wrap {
+      background: #fff;
+      padding: 16px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      text-align: center;
+      max-width: 240px;
+      width: 100%;
     }
-    .qr-wrap img{width:100px; height:100px}
-
-    /* PHOTO */
-    .photo-card{position:relative; border-radius:12px; overflow:hidden; box-shadow:0 8px 30px rgba(0,0,0,0.2)}
-    .photo-card img{width:100%; height:auto}
-
-    /* BUTTON in the center */
-    .center-btn{
-      position:absolute;
-      left:50%; top:50%;
-      transform:translate(-50%,-50%);
-      width:70px; height:70px;
-      border-radius:50%;
-      backdrop-filter:blur(6px);
-      background:rgba(255,255,255,0.25);
-      border:1px solid #fff;
-      display:flex; justify-content:center; align-items:center;
-      cursor:pointer;
-      box-shadow:0 6px 20px rgba(0,0,0,0.35);
+    .qr-wrap img {
+      width: 200px;
+      height: 200px;
+      display: block;
+      margin: 0 auto 12px;
     }
-    .center-btn span{
-      background:#fff; border-radius:50%; padding:10px 14px;
-      font-weight:bold; color:var(--accent);
+    .qr-wrap .info-text {
+      font-size: 14px;
+      color: #555;
     }
-
-    /* MODAL */
-    .overlay{
-      position:fixed; inset:0; display:none;
-      justify-content:center; align-items:center;
-      background:rgba(0,0,0,0.65);
-      z-index:200;
-    }
-    .menu-panel{
-      background:#fff; width:90%; max-width:380px;
-      border-radius:12px; padding:18px;
-      max-height:85vh; overflow:auto;
-    }
-    .cake-list li{
-      list-style:none; display:flex; justify-content:space-between;
-      padding:8px 0; border-bottom:1px solid #eee;
-    }
-    .btn{padding:10px 16px; border:0; background:var(--accent);
-         color:#fff; border-radius:8px; cursor:pointer;}
   </style>
 </head>
 <body>
 
-<div class="container">
-
-  <!-- QR CODE (STATIC) -->
   <div class="qr-wrap">
-    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://blendahajdari-jpg.github.io/ErtaCaffe-Menu/#foto1" alt="QR Code">
-    <div style="font-size:12px; color:#666;">Skano për të hapur</div>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://blendahajdari-jpg.github.io/ErtaCaffe-Menu/menu.html" alt="QR Code Erta Caffe" />
+    <div class="info-text">Skano për të hapur Menunë</div>
   </div>
-
-  <!-- PHOTO (foto1) -->
-  <div class="photo-card" id="foto1">
-    <img src="foto1.jpg"
-         alt="Foto e Erta Caffe"
-         onerror="this.src='A_digital_photograph_showcases_Erta_coffee_and_swe.png'">
-
-    <!-- BUTTON -->
-    <div class="center-btn" onclick="openMenu()">
-      <span>Menu</span>
-    </div>
-  </div>
-</div>
-
-<!-- MODAL -->
-<div class="overlay" id="overlay">
-  <div class="menu-panel">
-    <h2>Menu — Tortat</h2>
-    <ul class="cake-list" id="cakeList">
-      <li><span>Tortë Çokollatë</span> <span>€18</span></li>
-      <li><span>Tortë Luleshtrydhe</span> <span>€20</span></li>
-      <li><span>Tortë Pistache</span> <span>€21</span></li>
-    </ul>
-    <div style="text-align:right; margin-top:12px;">
-      <button class="btn" onclick="closeMenu()">Mbylle</button>
-    </div>
-  </div>
-</div>
-
-<script>
-function openMenu(){ document.getElementById('overlay').style.display='flex'; }
-function closeMenu(){ document.getElementById('overlay').style.display='none'; }
-</script>
 
 </body>
 </html>
