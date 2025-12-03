@@ -3,79 +3,45 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ERTA CAFFE — Menu</title>
+  <title>ERTA CAFFE — Foto</title>
   <style>
     body {
-      margin:0;
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
+      margin: 0;
+      background: #f7d6e0; /* ngjyrë rozë e qetë */
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 0;
-      overflow-x: hidden;
+      justify-content: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      padding: 20px;
     }
     .photo-card {
-      position: relative;
-      width: 85vw;
-      max-width: 360px;
-      height: 70vh;
-      border-radius: 24px;
+      max-width: 350px;
+      width: 100%;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 12px 40px rgba(0,0,0,0.25);
-      margin: 30px auto;
-      border: 4px solid var(--accent, #f06b2d);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      margin-bottom: 30px;
+      background: #fff;
     }
     .photo-card img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
       display: block;
-      border-radius: 20px;
     }
-    .center-btn {
-      position: absolute;
-      left: 50%;
-      top: 88%;
-      transform: translate(-50%, -50%);
-      padding: 16px 36px;
-      font-size: 22px;
-      background: var(--accent, #f06b2d);
-      color: #fff;
-      font-weight: bold;
+    .btn-menu {
+      background: #d77ba5; /* ngjyrë pak më e fortë rozë */
+      color: white;
       border: none;
-      border-radius: 50px;
+      padding: 14px 40px;
+      font-size: 20px;
+      border-radius: 40px;
       cursor: pointer;
-      box-shadow: 0 6px 18px rgba(240,107,45,0.8);
+      box-shadow: 0 4px 12px rgba(215,123,165,0.7);
       transition: background-color 0.3s ease;
-      z-index: 10;
     }
-    .center-btn:hover {
-      background: #d75a15;
-    }
-    .menu-list {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      max-width: 400px;
-      width: 90%;
-      padding: 20px;
-      display: none;
-      flex-direction: column;
-      gap: 16px;
-      margin: 20px auto;
-      color: #333;
-      font-weight: 600;
-      font-size: 18px;
-    }
-    .menu-list.active {
-      display: flex;
-    }
-    .menu-item {
-      display: flex;
-      justify-content: space-between;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 8px;
+    .btn-menu:hover {
+      background: #b05d7e;
     }
   </style>
 </head>
@@ -83,21 +49,9 @@
 
   <div class="photo-card">
     <img src="foto1.jpg" alt="Foto e Erta Caffe" onerror="this.src='A_digital_photograph_showcases_Erta_coffee_and_swe.png'"/>
-    <button class="center-btn" onclick="toggleMenu()">Menu</button>
   </div>
 
-  <div class="menu-list" id="menuList">
-    <div class="menu-item"><span>Tortë Çokollatë</span><span>€18</span></div>
-    <div class="menu-item"><span>Tortë Luleshtrydhe</span><span>€20</span></div>
-    <div class="menu-item"><span>Tortë Pistache</span><span>€21</span></div>
-  </div>
-
-<script>
-  function toggleMenu() {
-    const menu = document.getElementById('menuList');
-    menu.classList.toggle('active');
-  }
-</script>
+  <button class="btn-menu" onclick="location.href='menu-list.html'">Menu</button>
 
 </body>
 </html>
