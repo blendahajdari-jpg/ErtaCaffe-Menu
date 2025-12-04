@@ -1,63 +1,218 @@
 <!doctype html>
 <html lang="sq">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ERTA CAFFE — Menu Tortash</title>
-  <style>
-    body {
-      margin: 0;
-      background: #f7d6e0; /* e njëjtë si faqja e parë për konsistencë */
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      padding: 40px 20px;
-      min-height: 100vh;
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Menu</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+    :root{
+        --bg:#faecd2;
+        --accent:#154f45;
+        --text:#2b231f;
+        --dot:rgba(43,35,31,0.55);
+        --maxw:1050px;
     }
-    .menu-container {
-      background: #fff;
-      border-radius: 20px;
-      padding: 30px 40px;
-      max-width: 420px;
-      width: 100%;
-      box-shadow: 0 12px 30px rgba(215,123,165,0.35);
+    body{
+        margin:0;
+        background:var(--bg);
+        font-family:"Roboto", sans-serif;
+        color:var(--text);
     }
-    h2 {
-      color: #b05d7e;
-      font-weight: 700;
-      margin-bottom: 24px;
-      text-align: center;
-      font-size: 28px;
+    .page{
+        max-width:var(--maxw);
+        margin:20px auto;
+        background:#fdf6e8;
+        padding:40px;
+        box-shadow:0 4px 18px rgba(0,0,0,0.1);
+        border-radius:14px;
     }
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+    h1{
+        background:var(--accent);
+        color:#fff;
+        padding:14px;
+        text-align:center;
+        border-radius:10px;
+        font-size:36px;
+        font-family:"Playfair Display", serif;
+        letter-spacing:1px;
+        margin:-20px -20px 30px;
     }
-    li {
-      display: flex;
-      justify-content: space-between;
-      font-size: 20px;
-      padding: 12px 0;
-      border-bottom: 1px solid #f1c9d9;
-      color: #6b3a4a;
-      font-weight: 600;
+    .section-title{
+        font-size:26px;
+        font-family:"Playfair Display", serif;
+        color:var(--accent);
+        margin:30px 0 15px;
+        text-align:center;
+        text-transform:uppercase;
     }
-    li:last-child {
-      border-bottom: none;
+    .columns{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:25px 40px;
     }
-  </style>
+    .item{
+        display:flex;
+        margin:10px 0;
+        gap:10px;
+    }
+    .name{
+        font-size:19px;
+        min-width:160px;
+        font-family:"Playfair Display", serif;
+    }
+    .dots{
+        flex:1;
+        border-bottom:2px dotted var(--dot);
+        height:0.6em;
+        transform:translateY(6px);
+    }
+    .price{
+        font-size:19px;
+        font-weight:bold;
+        font-family:"Playfair Display", serif;
+        min-width:60px;
+        text-align:right;
+    }
+</style>
 </head>
 <body>
 
-  <div class="menu-container">
-    <h2>Menu — Tortat</h2>
-    <ul>
-      <li><span>Tortë Çokollatë</span><span>€18</span></li>
-      <li><span>Tortë Luleshtrydhe</span><span>€20</span></li>
-      <li><span>Tortë Pistache</span><span>€21</span></li>
-    </ul>
-  </div>
+<div class="page">
+
+<h1>Menu</h1>
+
+<!-- ================= TORTET =================== -->
+<div class="section-title">Tortet</div>
+
+<div class="columns">
+    <div class="item"><div class="name">Choco Cake</div><div class="dots"></div><div class="price">1.70€</div></div>
+    <div class="item"><div class="name">Rafaelo</div><div class="dots"></div><div class="price">1.70€</div></div>
+    <div class="item"><div class="name">Trileqe</div><div class="dots"></div><div class="price">1.70€</div></div>
+    <div class="item"><div class="name">Monaliza</div><div class="dots"></div><div class="price">1.70€</div></div>
+    <div class="item"><div class="name">Red Valved</div><div class="dots"></div><div class="price">1.70€</div></div>
+    <div class="item"><div class="name">Snickers Cake</div><div class="dots"></div><div class="price">1.70€</div></div>
+    <div class="item"><div class="name">Tripel Cake</div><div class="dots"></div><div class="price">1.70€</div></div>
+    <div class="item"><div class="name">Cheesecake Lotus</div><div class="dots"></div><div class="price">1.70€</div></div>
+    <div class="item"><div class="name">Cheesecake Fruta Mali</div><div class="dots"></div><div class="price">1.70€</div></div>
+    <div class="item"><div class="name">Tiramisu</div><div class="dots"></div><div class="price">1.70€</div></div>
+</div>
+
+<!-- ================= COCKTAIL =================== -->
+<div class="section-title">Cocktail</div>
+
+<div class="columns">
+    <div class="item"><div class="name">Summer Vibes (pa alk.)</div><div class="dots"></div><div class="price">2.50€</div></div>
+    <div class="item"><div class="name">Summer Vibes (me alk.)</div><div class="dots"></div><div class="price">3.50€</div></div>
+
+    <div class="item"><div class="name">Ibiza Summer (pa alk.)</div><div class="dots"></div><div class="price">2.50€</div></div>
+    <div class="item"><div class="name">Ibiza Summer (me alk.)</div><div class="dots"></div><div class="price">3.50€</div></div>
+
+    <div class="item"><div class="name">Green Apple (pa alk.)</div><div class="dots"></div><div class="price">2.50€</div></div>
+    <div class="item"><div class="name">Green Apple (me alk.)</div><div class="dots"></div><div class="price">3.50€</div></div>
+
+    <div class="item"><div class="name">Strawberry Juice (pa alk.)</div><div class="dots"></div><div class="price">2.50€</div></div>
+    <div class="item"><div class="name">Strawberry Juice (me alk.)</div><div class="dots"></div><div class="price">3.50€</div></div>
+
+    <div class="item"><div class="name">Mirtollo Berries (pa alk.)</div><div class="dots"></div><div class="price">2.50€</div></div>
+    <div class="item"><div class="name">Mirtollo Berries (me alk.)</div><div class="dots"></div><div class="price">3.50€</div></div>
+</div>
+
+<!-- ================= PIJET E NGROHTA (sorted) =================== -->
+<div class="section-title">Pijet e Ngrohta</div>
+
+<div class="columns">
+    <div class="item"><div class="name">Makiato e Vogel</div><div class="dots"></div><div class="price">0.70€</div></div>
+    <div class="item"><div class="name">Qaj i ngrohtë</div><div class="dots"></div><div class="price">0.70€</div></div>
+    <div class="item"><div class="name">Qumësht – Bambi</div><div class="dots"></div><div class="price">0.70€</div></div>
+
+    <div class="item"><div class="name">Espresso</div><div class="dots"></div><div class="price">1.00€</div></div>
+    <div class="item"><div class="name">Nescafe</div><div class="dots"></div><div class="price">1.00€</div></div>
+    <div class="item"><div class="name">Makiato e Madhe</div><div class="dots"></div><div class="price">1.00€</div></div>
+
+    <div class="item"><div class="name">Cappuccino</div><div class="dots"></div><div class="price">1.50€</div></div>
+    <div class="item"><div class="name">Qokollad e nxehtë</div><div class="dots"></div><div class="price">1.50€</div></div>
+
+    <div class="item"><div class="name">Latte</div><div class="dots"></div><div class="price">2.00€</div></div>
+    <div class="item"><div class="name">Double Espresso</div><div class="dots"></div><div class="price">2.00€</div></div>
+</div>
+
+<!-- ================= PIJET E FTOHTA (sorted) =================== -->
+<div class="section-title">Pijet e Ftohta</div>
+
+<div class="columns">
+
+    <!-- 0.80€ -->
+    <div class="item"><div class="name">Boronice</div><div class="dots"></div><div class="price">0.80€</div></div>
+    <div class="item"><div class="name">Limonad</div><div class="dots"></div><div class="price">0.80€</div></div>
+
+    <!-- 1.00€ -->
+    <div class="item"><div class="name">Ujë natural 0.5L</div><div class="dots"></div><div class="price">1.00€</div></div>
+    <div class="item"><div class="name">Ujë mineral 0.5L</div><div class="dots"></div><div class="price">1.00€</div></div>
+
+    <!-- 1.30€ -->
+    <div class="item"><div class="name">Ice Tea 0.33L</div><div class="dots"></div><div class="price">1.30€</div></div>
+    <div class="item"><div class="name">Coca Cola 0.25L</div><div class="dots"></div><div class="price">1.30€</div></div>
+    <div class="item"><div class="name">Coca Cola Zero 0.25L</div><div class="dots"></div><div class="price">1.30€</div></div>
+    <div class="item"><div class="name">Fanta Orange 0.25L</div><div class="dots"></div><div class="price">1.30€</div></div>
+    <div class="item"><div class="name">Fanta Tropical 0.25L</div><div class="dots"></div><div class="price">1.30€</div></div>
+    <div class="item"><div class="name">Fanta Exotic 0.25L</div><div class="dots"></div><div class="price">1.30€</div></div>
+    <div class="item"><div class="name">Schweppes 0.25L</div><div class="dots"></div><div class="price">1.30€</div></div>
+    <div class="item"><div class="name">Schweppes Tonic 0.25L</div><div class="dots"></div><div class="price">1.30€</div></div>
+    <div class="item"><div class="name">Sprite 0.25L</div><div class="dots"></div><div class="price">1.30€</div></div>
+    <div class="item"><div class="name">Golden Eagle</div><div class="dots"></div><div class="price">1.30€</div></div>
+
+    <div class="item"><div class="name">Natural Vishnje</div><div class="dots"></div><div class="price">1.30€</div></div>
+    <div class="item"><div class="name">Natural Molle</div><div class="dots"></div><div class="price">1.30€</div></div>
+    <div class="item"><div class="name">Natural Pjeshke</div><div class="dots"></div><div class="price">1.30€</div></div>
+    <div class="item"><div class="name">Natural Karrote</div><div class="dots"></div><div class="price">1.30€</div></div>
+
+    <!-- 3.00€ -->
+    <div class="item"><div class="name">Red Bull 0.25L</div><div class="dots"></div><div class="price">3.00€</div></div>
+</div>
+
+<!-- ================= PIJET ALKOOOLIKE (sorted) =================== -->
+<div class="section-title">Pijet Alkoolike</div>
+
+<div class="columns">
+
+    <!-- 2.00€ -->
+    <div class="item"><div class="name">Absolut Vodka</div><div class="dots"></div><div class="price">3.00€</div></div>
+
+    <!-- 2.50€ -->
+    <div class="item"><div class="name">Raki Shtepie</div><div class="dots"></div><div class="price">2.50€</div></div>
+
+    <!-- 3.00€ -->
+    <div class="item"><div class="name">Vodka Absolut</div><div class="dots"></div><div class="price">3.00€</div></div>
+
+    <!-- 3.50€ -->
+    <div class="item"><div class="name">Raki Dardhe 2/3</div><div class="dots"></div><div class="price">3.00€</div></div>
+    <div class="item"><div class="name">Raki Ftoni</div><div class="dots"></div><div class="price">3.00€</div></div>
+    <div class="item"><div class="name">Martini Rosso</div><div class="dots"></div><div class="price">3.50€</div></div>
+    <div class="item"><div class="name">Martini Bianco</div><div class="dots"></div><div class="price">3.50€</div></div>
+    <div class="item"><div class="name">Campari</div><div class="dots"></div><div class="price">3.50€</div></div>
+    <div class="item"><div class="name">Jagermeister</div><div class="dots"></div><div class="price">3.50€</div></div>
+
+    <!-- 4.00€ -->
+    <div class="item"><div class="name">Malibu</div><div class="dots"></div><div class="price">4.00€</div></div>
+
+    <!-- 4.50€ -->
+    <div class="item"><div class="name">Jack Daniels</div><div class="dots"></div><div class="price">4.50€</div></div>
+    <div class="item"><div class="name">Havana Club 3</div><div class="dots"></div><div class="price">4.50€</div></div>
+
+    <!-- 5.00€ -->
+    <div class="item"><div class="name">Chivas Regal</div><div class="dots"></div><div class="price">5.00€</div></div>
+
+    <!-- 6.00€ -->
+    <div class="item"><div class="name">Vodka Grey Goose</div><div class="dots"></div><div class="price">6.00€</div></div>
+
+    <!-- 6.50€ -->
+    <div class="item"><div class="name">Hennessy</div><div class="dots"></div><div class="price">6.50€</div></div>
+</div>
+
+</div>
 
 </body>
 </html>
